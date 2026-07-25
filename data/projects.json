@@ -1,0 +1,722 @@
+[
+  {
+    "id": "subtrack",
+    "slug": "subtrack",
+    "rank": 1,
+    "name": "SubTrack",
+    "tagline": "The SaaS spend tracker that doesn't require a SaaS management team.",
+    "category": "SMB FinOps",
+    "status": "POC",
+    "pain_summary": "Startups and small teams (10-50 employees) track 50-150 SaaS subscriptions in a Google Sheet nobody updates. Enterprise tools (Zylo $35K/yr) are overkill; the affordable middle was acquired away. 73% of SaaS tools raised prices in 2025, so teams get blindsided by auto-renewals.",
+    "target_audience": "SMBs 10-50 employees; startup ops/finance leads; MSPs",
+    "willingness_to_pay": "$19-39/month (stated in research)",
+    "evidence_quotes": [
+      "Enterprise SaaS management costs $35K+/year. Small teams track 50+ subscriptions in spreadsheets. 73% of tools raised prices in 2025 and nobody built the $19/mo alternative.",
+      "Zylo charges $35K-45K/year while 20-person startups track 60+ subscriptions in a Google Sheet nobody updates. The 'Affordable Middle' has been systematically eliminated (Trelica->1Password, G2 Track deprecated)."
+    ],
+    "sources": [
+      {
+        "title": "MicroGaps: SaaS subscription tracker for small teams",
+        "url": "https://www.microgaps.com/gaps/saas-subscription-tracker-small-teams"
+      },
+      {
+        "title": "TrackAllSubs: Spreadsheet vs App",
+        "url": "https://trackallsubs.com/blog/subscription-tracker-spreadsheet-vs-app"
+      }
+    ],
+    "poc_scope": "CRUD app: add subscription (vendor, cost, cycle, owner, renewal date), dashboard with upcoming renewals + spend rollup, email reminder 30/60/90 days out, CSV import. No bank OAuth needed for POC.",
+    "build_time_weeks": 2,
+    "waitlist_target": 50,
+    "decision_deadline_days": 30,
+    "marketing_required_posts": 3,
+    "signups": 0,
+    "signups_by_channel": {
+      "twitter": 0,
+      "reddit": 0,
+      "linkedin": 0,
+      "other": 0
+    },
+    "marketing_posts_published": 3,
+    "social_posts": [
+      {
+        "platform": "Twitter / X",
+        "copy": "Your startup is leaking $ on SaaS you forgot you pay for. 73% of tools raised prices in 2025. SubTrack tells you who owns it, when it renews, and what it costs — in 10 min. Join the waitlist: [LINK]"
+      },
+      {
+        "platform": "Reddit r/Entrepreneur",
+        "copy": "We're building the $19/mo alternative to $35K/yr SaaS management tools. If you track subscriptions in a spreadsheet that's 3 months stale, this is for you. Waitlist: [LINK]"
+      },
+      {
+        "platform": "LinkedIn",
+        "copy": "Finance leads: stop chasing teammates for software spend. SubTrack answers the 3 questions enterprise tools can't at SMB price: who owns it, when renews, what it costs. Early access: [LINK]"
+      }
+    ],
+    "distribution": {
+      "owner": "Leverwright Labs (@leverwrightlabs)",
+      "channels": [
+        "Reddit",
+        "Indie Hackers",
+        "LinkedIn",
+        "Product Hunt"
+      ],
+      "cadence": "3 posts/week · 30 days",
+      "posted": {
+        "Reddit": true,
+        "Indie Hackers": false,
+        "LinkedIn": false,
+        "Product Hunt": false
+      },
+      "policy": "Studio identity only. Personal accounts never used."
+    },
+    "created_at": "2026-07-14",
+    "poc_launched_at": "2026-07-14",
+    "notes": "Strongest signal in the batch. Affordable-middle gap is structural (acquisitions), not temporary."
+  },
+  {
+    "id": "pricepulse",
+    "slug": "pricepulse",
+    "rank": 2,
+    "name": "PricePulse",
+    "tagline": "Know the moment a competitor changes price, feature, or messaging.",
+    "category": "SMB Competitive Intel",
+    "status": "POC",
+    "pain_summary": "SMB ecommerce / founders manually check competitor sites and leave 4-7% margin on the table because competitors change prices 3x/day while they check weekly. Existing monitors cost $99-$3000/mo — SMB gap.",
+    "target_audience": "SMB ecommerce stores, D2C brands, solo founders",
+    "willingness_to_pay": "$19.99/mo and up (stated)",
+    "evidence_quotes": [
+      "Most operators leave 4-7% margin on the table because their tools are slow, manual, and disconnected from their P&L. Spreadsheets get checked weekly. Competitors change prices three times a day.",
+      "Stop wasting hours manually checking competitor websites. Kompetar monitors them 24/7 and uses AI to alert you the moment they change pricing, launch features, or shift their messaging."
+    ],
+    "sources": [
+      {
+        "title": "Benchra Pricing (SMB competitor price monitoring)",
+        "url": "https://priceedge.online/"
+      },
+      {
+        "title": "Kompetar AI competitor monitoring",
+        "url": "https://www.kompetar.com/"
+      }
+    ],
+    "poc_scope": "Add competitor URLs, headless-poll key pages on a schedule, diff text, classify change (price/feature/copy) with a simple rules or cheap LLM call, email/Slack alert. POC covers 3 competitors, daily scans.",
+    "build_time_weeks": 2,
+    "waitlist_target": 50,
+    "decision_deadline_days": 30,
+    "marketing_required_posts": 3,
+    "signups": 0,
+    "signups_by_channel": {
+      "twitter": 0,
+      "reddit": 0,
+      "linkedin": 0,
+      "other": 0
+    },
+    "marketing_posts_published": 2,
+    "social_posts": [
+      {
+        "platform": "Twitter / X",
+        "copy": "Competitors change prices 3x a day. You check weekly. That gap is 4-7% of margin. PricePulse watches them 24/7 and pings you on change. Waitlist: [LINK]"
+      },
+      {
+        "platform": "Reddit r/ecommerce",
+        "copy": "Built a $20/mo competitor price monitor because Prisync ($99) and PriceShape ($250) were overkill for my store. Early access: [LINK]"
+      },
+      {
+        "platform": "LinkedIn",
+        "copy": "Pricing intelligence used to need a dedicated analyst. PricePulse gives SMBs the alert without the headcount. Join the list: [LINK]"
+      }
+    ],
+    "distribution": {
+      "owner": "Leverwright Labs (@leverwrightlabs)",
+      "channels": [
+        "Reddit",
+        "Indie Hackers",
+        "LinkedIn",
+        "Product Hunt"
+      ],
+      "cadence": "3 posts/week · 30 days",
+      "posted": {
+        "Reddit": false,
+        "Indie Hackers": false,
+        "LinkedIn": false,
+        "Product Hunt": false
+      },
+      "policy": "Studio identity only. Personal accounts never used."
+    },
+    "created_at": "2026-07-14",
+    "poc_launched_at": "2026-07-14",
+    "notes": "Clear WTP, but differentiation vs incumbents needs the 'affordable + simple' angle, not more features."
+  },
+  {
+    "id": "reviewreply",
+    "slug": "reviewreply",
+    "rank": 3,
+    "name": "ReviewReply AI",
+    "tagline": "Google-review replies that actually get published (not flagged as spam).",
+    "category": "Local Business Reputation",
+    "status": "POC",
+    "pain_summary": "Google rolled out 2026 moderation on Business Profile review replies: generic/templated/AI-boilerplate replies now get rejected or delayed up to 30 days. Local businesses lose the trust signal silently. They need specific, on-policy drafts they can approve fast.",
+    "target_audience": "Local businesses, agencies managing GBP, multi-location brands",
+    "willingness_to_pay": "$20-49/mo (reputation tools proven WTP)",
+    "evidence_quotes": [
+      "Google has quietly rolled out a moderation layer for business owner replies... your response is no longer published the instant you hit submit. Generic responses copy-pasted across dozens of reviews are one of the clearest patterns Google's systems flag.",
+      "Replies that read as obviously automated, repetitive in structure, or disconnected from the review's actual content are more likely to be flagged. A quick human pass to add specificity significantly lowers that risk."
+    ],
+    "sources": [
+      {
+        "title": "Google Review Reply Moderation 2026 (Saltech Systems)",
+        "url": "https://saltechsystems.com/google-review-reply-moderation-2026/"
+      },
+      {
+        "title": "Local Search Forum: can't reply to reviews",
+        "url": "https://localsearchforum.com/threads/cant-reply-to-reviews.60710/"
+      }
+    ],
+    "poc_scope": "Paste a review -> AI drafts a specific, policy-compliant reply pulling a detail from the review -> user edits/approves -> copy to clipboard. POC: draft + approve + 'post checklist' (links/stuffing warnings). No GBP API needed for POC.",
+    "build_time_weeks": 2,
+    "waitlist_target": 50,
+    "decision_deadline_days": 30,
+    "marketing_required_posts": 3,
+    "signups": 0,
+    "signups_by_channel": {
+      "twitter": 0,
+      "reddit": 0,
+      "linkedin": 0,
+      "other": 0
+    },
+    "marketing_posts_published": 1,
+    "social_posts": [
+      {
+        "platform": "Twitter / X",
+        "copy": "Google now moderates your review replies — generic AI drafts get rejected. ReviewReply writes specific, on-policy replies that actually go live. Waitlist: [LINK]"
+      },
+      {
+        "platform": "Reddit r/smallbusiness",
+        "copy": "Google is silently rejecting business review replies in 2026. If you manage a GBP, your 'reply' may never publish. We're building a draft tool that passes moderation. Early access: [LINK]"
+      },
+      {
+        "platform": "LinkedIn",
+        "copy": "A thoughtful reply to a bad review reassures future customers — if it publishes. ReviewReply AI helps local brands reply on-policy, fast. Join: [LINK]"
+      }
+    ],
+    "distribution": {
+      "owner": "Leverwright Labs (@leverwrightlabs)",
+      "channels": [
+        "Reddit",
+        "Indie Hackers",
+        "LinkedIn",
+        "Product Hunt"
+      ],
+      "cadence": "3 posts/week · 30 days",
+      "posted": {
+        "Reddit": false,
+        "Indie Hackers": false,
+        "LinkedIn": false,
+        "Product Hunt": false
+      },
+      "policy": "Studio identity only. Personal accounts never used."
+    },
+    "created_at": "2026-07-14",
+    "poc_launched_at": "2026-07-14",
+    "notes": "Time-boxed window: Google's moderation change is recent, so first-movers capture the pain while it's hot."
+  },
+  {
+    "id": "clientreport",
+    "slug": "clientreport",
+    "rank": 4,
+    "name": "ClientReport",
+    "tagline": "Your Friday 4-hour report, auto-generated and emailed.",
+    "category": "Agency / Client Ops",
+    "status": "RESEARCH",
+    "pain_summary": "Agencies and freelancers manually copy-paste screenshots from 5 dashboards into a PDF every Friday (4 hours). They want auto-generated, branded client reports emailed on schedule.",
+    "target_audience": "Agencies, freelancers, consultants with retainer clients",
+    "willingness_to_pay": "$50/mo (explicit 'I'd pay $50/mo instantly')",
+    "evidence_quotes": [
+      "Every Friday I manually copy-paste screenshots and statistics from 5 dashboards into a PDF report for clients. It takes 4 hours. If there was a tool to auto-generate and email this, I'd pay $50/mo instantly."
+    ],
+    "sources": [
+      {
+        "title": "ThreddIQ: Reddit pain-point mining example",
+        "url": "https://threddiq.com/"
+      }
+    ],
+    "poc_scope": "Connect 2-3 data sources (CSV upload / simple API), template a branded PDF, schedule email delivery. POC: manual data drop + PDF + send.",
+    "build_time_weeks": 2,
+    "waitlist_target": 50,
+    "decision_deadline_days": 30,
+    "marketing_required_posts": 3,
+    "signups": 0,
+    "signups_by_channel": {
+      "twitter": 0,
+      "reddit": 0,
+      "linkedin": 0,
+      "other": 0
+    },
+    "marketing_posts_published": 0,
+    "social_posts": [
+      {
+        "platform": "Twitter / X",
+        "copy": "You spend 4 hours every Friday building client reports. ClientReport auto-generates the PDF and emails it. Get those Fridays back. Waitlist: [LINK]"
+      },
+      {
+        "platform": "Reddit r/agency",
+        "copy": "What do you use to send clients a weekly metrics PDF without the copy-paste hell? We're building one. Early access: [LINK]"
+      },
+      {
+        "platform": "LinkedIn",
+        "copy": "Client reporting shouldn't eat your Friday. ClientReport turns dashboard data into a branded PDF on autopilot. Join the list: [LINK]"
+      }
+    ],
+    "distribution": {
+      "owner": "Leverwright Labs (@leverwrightlabs)",
+      "channels": [
+        "Reddit",
+        "Indie Hackers",
+        "LinkedIn",
+        "Product Hunt"
+      ],
+      "cadence": "3 posts/week · 30 days",
+      "posted": {
+        "Reddit": false,
+        "Indie Hackers": false,
+        "LinkedIn": false,
+        "Product Hunt": false
+      },
+      "policy": "Studio identity only. Personal accounts never used."
+    },
+    "created_at": "2026-07-14",
+    "poc_launched_at": null,
+    "notes": "Explicit $50/mo WTP is the strongest single signal in the set. Prioritize POC."
+  },
+  {
+    "id": "legalquick",
+    "slug": "legalquick",
+    "rank": 5,
+    "name": "LegalQuick",
+    "tagline": "A real privacy policy + TOS for your site, in 60 seconds.",
+    "category": "Compliance / Indie",
+    "status": "RESEARCH",
+    "pain_summary": "Every site with a form, analytics, or email list legally needs a privacy policy, but templates are generic or expensive subscriptions. Indie hackers and small businesses want a cheap, accurate, one-time doc.",
+    "target_audience": "Indie hackers, small business sites, solo founders",
+    "willingness_to_pay": "One-time $19 or $9-25/mo",
+    "evidence_quotes": [
+      "Yes. If your website collects any personal data — including names, email addresses, IP addresses, or cookies — you are legally required to have a privacy policy under GDPR, CCPA, and many other laws.",
+      "Used by 1,000+ indie hackers & small businesses. PolicyGen covers GDPR, CCPA, COPPA with no subscription, no account."
+    ],
+    "sources": [
+      {
+        "title": "PolicyGen free privacy policy generator",
+        "url": "https://policygen.app/"
+      },
+      {
+        "title": "PolicifyAI for small businesses",
+        "url": "https://policifyai.com/solutions/for-small-businesses"
+      }
+    ],
+    "poc_scope": "Questionnaire (what data, which tools, jurisdictions) -> generate policy text + TOS + cookie policy -> copy/HTML/PDF. POC: static generator, no account.",
+    "build_time_weeks": 2,
+    "waitlist_target": 50,
+    "decision_deadline_days": 30,
+    "marketing_required_posts": 3,
+    "signups": 0,
+    "signups_by_channel": {
+      "twitter": 0,
+      "reddit": 0,
+      "linkedin": 0,
+      "other": 0
+    },
+    "marketing_posts_published": 0,
+    "social_posts": [
+      {
+        "platform": "Twitter / X",
+        "copy": "Shipping a side project? You legally need a privacy policy the moment you add analytics. LegalQuick generates a real one in 60 seconds — no $30/mo subscription. Waitlist: [LINK]"
+      },
+      {
+        "platform": "Reddit r/SaaS",
+        "copy": "Stop pasting generic ToS templates. LegalQuick writes one tailored to your stack + jurisdictions. Early access: [LINK]"
+      },
+      {
+        "platform": "Indie Hackers",
+        "copy": "Launched 3 products, wrote the privacy policy 3 times. Building the tool I wished existed. Join: [LINK]"
+      }
+    ],
+    "distribution": {
+      "owner": "Leverwright Labs (@leverwrightlabs)",
+      "channels": [
+        "Reddit",
+        "Indie Hackers",
+        "LinkedIn",
+        "Product Hunt"
+      ],
+      "cadence": "3 posts/week · 30 days",
+      "posted": {
+        "Reddit": false,
+        "Indie Hackers": false,
+        "LinkedIn": false,
+        "Product Hunt": false
+      },
+      "policy": "Studio identity only. Personal accounts never used."
+    },
+    "created_at": "2026-07-14",
+    "poc_launched_at": null,
+    "notes": "Crowded but WTP is real; angle = one-time cheap + accurate, not another subscription."
+  },
+  {
+    "id": "roadactive",
+    "slug": "roadactive",
+    "rank": 6,
+    "name": "RoadActive",
+    "tagline": "A public roadmap + changelog your users actually vote on.",
+    "category": "Product Ops / Feedback",
+    "status": "RESEARCH",
+    "pain_summary": "Small SaaS teams want a Canny-style feedback board + roadmap + changelog but enterprise tools (ProductBoard $70K/yr, Canny per-seat) are too expensive. Users who see requests on the roadmap churn 40% less.",
+    "target_audience": "Small SaaS teams, solo founders, startups",
+    "willingness_to_pay": "$19/mo (stated)",
+    "evidence_quotes": [
+      "Users who see their requests on your roadmap are 40% less likely to churn. ProductBoard and Aha are enterprise tools with complex pricing ($70K+/year). UserJot starts free.",
+      "The affordable Canny alternative for small SaaS teams, startups, and solo founders — flat pricing, no per-user fees."
+    ],
+    "sources": [
+      {
+        "title": "UserJot public product roadmap",
+        "url": "https://userjot.com/product-roadmap"
+      },
+      {
+        "title": "UseFeed feature voting + roadmap",
+        "url": "https://getusefeed.com/"
+      }
+    ],
+    "poc_scope": "Feedback board (submit + upvote), public roadmap columns (planned/in progress/shipped), changelog. POC: single board, embeddable widget.",
+    "build_time_weeks": 2,
+    "waitlist_target": 50,
+    "decision_deadline_days": 30,
+    "marketing_required_posts": 3,
+    "signups": 0,
+    "signups_by_channel": {
+      "twitter": 0,
+      "reddit": 0,
+      "linkedin": 0,
+      "other": 0
+    },
+    "social_posts": [
+      {
+        "platform": "Twitter / X",
+        "copy": "Canny is $100+/mo per seat. RoadActive is a flat $19 for feedback board + roadmap + changelog. Build in public without the enterprise tax. Waitlist: [LINK]"
+      },
+      {
+        "platform": "Reddit r/SaaS",
+        "copy": "What do you use for a public roadmap that isn't $70K/yr? Building a cheap alternative. Early access: [LINK]"
+      },
+      {
+        "platform": "Indie Hackers",
+        "copy": "Users who see their request on your roadmap churn 40% less. RoadActive makes that free to start. Join: [LINK]"
+      }
+    ],
+    "distribution": {
+      "owner": "Leverwright Labs (@leverwrightlabs)",
+      "channels": [
+        "Reddit",
+        "Indie Hackers",
+        "LinkedIn",
+        "Product Hunt"
+      ],
+      "cadence": "3 posts/week · 30 days",
+      "posted": {
+        "Reddit": false,
+        "Indie Hackers": false,
+        "LinkedIn": false,
+        "Product Hunt": false
+      },
+      "policy": "Studio identity only. Personal accounts never used."
+    },
+    "created_at": "2026-07-14",
+    "poc_launched_at": null,
+    "notes": "Crowded category but proven WTP and clear 'affordable alternative' positioning."
+  },
+  {
+    "id": "proofpilot",
+    "slug": "proofpilot",
+    "rank": 7,
+    "name": "ProofPilot",
+    "tagline": "Turn customer love into a wall of proof in 5 minutes.",
+    "category": "Social Proof / Marketing",
+    "status": "RESEARCH",
+    "pain_summary": "Indie hackers and agencies struggle to collect testimonials (5% response rate) and display them. AI-drafted testimonials from 3 answers lift response to 40%. Incumbents charge $50-100/mo.",
+    "target_audience": "Indie hackers, agencies, creators",
+    "willingness_to_pay": "$19/mo (stated)",
+    "evidence_quotes": [
+      "AI asks three simple questions, generates a polished testimonial, and your customer just approves. Response rates go from 5% to 40%.",
+      "Testimonial.to and Senja charge $50-100/month. TestiGather offers a $49 lifetime deal — bootstrapped founders shouldn't pay enterprise prices."
+    ],
+    "sources": [
+      {
+        "title": "Testimonix AI ghostwriter + widgets",
+        "url": "https://testimonix.io/"
+      },
+      {
+        "title": "Kudoso collect testimonials",
+        "url": "https://kudoso.io/"
+      }
+    ],
+    "poc_scope": "Branded collection form -> AI draft from 3 Qs -> approve -> one-line embed wall of love. POC: form + draft + embed.",
+    "build_time_weeks": 2,
+    "waitlist_target": 50,
+    "decision_deadline_days": 30,
+    "marketing_required_posts": 3,
+    "signups": 0,
+    "signups_by_channel": {
+      "twitter": 0,
+      "reddit": 0,
+      "linkedin": 0,
+      "other": 0
+    },
+    "social_posts": [
+      {
+        "platform": "Twitter / X",
+        "copy": "You get 5% of customers to leave a testimonial. ProofPilot's AI draft lifts that to 40%. One-line embed, live in 5 min. Waitlist: [LINK]"
+      },
+      {
+        "platform": "Reddit r/indiehackers",
+        "copy": "How do you collect testimonials without the awkward chase? Building a tool that writes the draft for them. Early access: [LINK]"
+      },
+      {
+        "platform": "LinkedIn",
+        "copy": "Social proof shouldn't cost $100/mo. ProofPilot is $19 and does the drafting for you. Join: [LINK]"
+      }
+    ],
+    "distribution": {
+      "owner": "Leverwright Labs (@leverwrightlabs)",
+      "channels": [
+        "Reddit",
+        "Indie Hackers",
+        "LinkedIn",
+        "Product Hunt"
+      ],
+      "cadence": "3 posts/week · 30 days",
+      "posted": {
+        "Reddit": false,
+        "Indie Hackers": false,
+        "LinkedIn": false,
+        "Product Hunt": false
+      },
+      "policy": "Studio identity only. Personal accounts never used."
+    },
+    "created_at": "2026-07-14",
+    "poc_launched_at": null,
+    "notes": "Commoditizing fast (many free tools). Need a sharp wedge — maybe video + AI draft combo."
+  },
+  {
+    "id": "snapdeduct",
+    "slug": "snapdeduct",
+    "rank": 8,
+    "name": "SnapDeduct",
+    "tagline": "Snap a receipt, get a Schedule C-ready deduction report.",
+    "category": "Freelancer Tax",
+    "status": "RESEARCH",
+    "pain_summary": "Freelancers miss $2,000-$5,600/yr in deductions from lost receipts. They want a scanner that categorizes into Schedule C lines and exports a tax-ready report — no full accounting suite.",
+    "target_audience": "Freelancers, 1099 contractors, sole proprietors",
+    "willingness_to_pay": "$5/mo (explicit, strong)",
+    "evidence_quotes": [
+      "Freelancers miss $2,000 to $5,000 in tax deductions every year because of lost receipts and messy records.",
+      "Freelancers miss an average of $5,600 in deductions annually. At $5/month this is a no-brainer."
+    ],
+    "sources": [
+      {
+        "title": "SparkReceipt for freelancers",
+        "url": "https://sparkreceipt.com/industries/freelancers/"
+      },
+      {
+        "title": "CentSense AI receipt scanner",
+        "url": "https://www.centsense.app/"
+      }
+    ],
+    "poc_scope": "Upload/photo receipt -> OCR (cheap API or mock) -> map to Schedule C category -> report export (CSV/PDF). POC: upload + categorize + export.",
+    "build_time_weeks": 2,
+    "waitlist_target": 100,
+    "decision_deadline_days": 45,
+    "marketing_required_posts": 3,
+    "signups": 0,
+    "signups_by_channel": {
+      "twitter": 0,
+      "reddit": 0,
+      "linkedin": 0,
+      "other": 0
+    },
+    "social_posts": [
+      {
+        "platform": "Twitter / X",
+        "copy": "You're leaving $5,600/yr in deductions on the table. SnapDeduct turns a receipt photo into a Schedule C report. $5/mo. Waitlist: [LINK]"
+      },
+      {
+        "platform": "Reddit r/freelance",
+        "copy": "Stop the April receipt panic. Snap a receipt, get the right Schedule C line. Building it. Early access: [LINK]"
+      },
+      {
+        "platform": "Reddit r/tax",
+        "copy": "Freelancers: what's your receipt system? We're building a scanner that maps to Schedule C automatically. Join: [LINK]"
+      }
+    ],
+    "distribution": {
+      "owner": "Leverwright Labs (@leverwrightlabs)",
+      "channels": [
+        "Reddit",
+        "Twitter / X",
+        "Instagram / TikTok",
+        "YouTube"
+      ],
+      "cadence": "3 posts/week · 45 days",
+      "posted": {
+        "Reddit": false,
+        "Twitter / X": false,
+        "Instagram / TikTok": false,
+        "YouTube": false
+      },
+      "policy": "Studio identity only. Personal accounts never used."
+    },
+    "created_at": "2026-07-14",
+    "poc_launched_at": null,
+    "notes": "Consumer-leaning audience -> higher target (100) + longer deadline (45d). Lower price point, high volume."
+  },
+  {
+    "id": "linkflow",
+    "slug": "linkflow",
+    "rank": 9,
+    "name": "LinkFlow",
+    "tagline": "A link-in-bio page that updates itself from your posts.",
+    "category": "Creator Tools",
+    "status": "POC",
+    "pain_summary": "Link-in-bio tools make creators manually paste every new post; generic pages convert at 1.5-3% vs 8-15% for architected pages. Creators want an auto-updating bio page tied to a scheduler, cheap.",
+    "target_audience": "Creators, influencers, small brands on Instagram/TikTok",
+    "willingness_to_pay": "$7-10/mo",
+    "evidence_quotes": [
+      "Most bio link tools force you to manually paste every new post. Posterly is built on a scheduler, so your bio page updates itself.",
+      "Generic link-in-bio pages convert at 1.5-3% of visitors; well-architected pages regularly hit 8-15%. The difference is design, prioritization, tracking."
+    ],
+    "sources": [
+      {
+        "title": "Posterly link in bio auto-sync",
+        "url": "https://www.poster.ly/link-in-bio"
+      },
+      {
+        "title": "Inflowave Links conversion playbook",
+        "url": "https://inflowave.io/features/links"
+      }
+    ],
+    "poc_scope": "Bio page builder (links, theme) + simple post scheduler that auto-adds latest posts to the page + per-link analytics. POC: page + scheduler + analytics.",
+    "build_time_weeks": 2,
+    "waitlist_target": 100,
+    "decision_deadline_days": 45,
+    "marketing_required_posts": 3,
+    "signups": 0,
+    "signups_by_channel": {
+      "twitter": 0,
+      "reddit": 0,
+      "linkedin": 0,
+      "other": 0
+    },
+    "social_posts": [
+      {
+        "platform": "Twitter / X",
+        "copy": "Your link-in-bio is stale the second you post. LinkFlow updates itself from your scheduler. Convert 1.5% -> 8%+. Waitlist: [LINK]"
+      },
+      {
+        "platform": "TikTok / Instagram caption",
+        "copy": "Stop pasting links by hand. LinkFlow's bio page stays current automatically. Early access: [LINK]"
+      },
+      {
+        "platform": "Reddit r/Instagram",
+        "copy": "What link-in-bio tool actually helps conversion? Building one with auto-sync + analytics. Join: [LINK]"
+      }
+    ],
+    "distribution": {
+      "owner": "Leverwright Labs (@leverwrightlabs)",
+      "channels": [
+        "Reddit",
+        "Twitter / X",
+        "Instagram / TikTok",
+        "YouTube"
+      ],
+      "cadence": "3 posts/week · 45 days",
+      "posted": {
+        "Reddit": false,
+        "Twitter / X": false,
+        "Instagram / TikTok": false,
+        "YouTube": false
+      },
+      "policy": "Studio identity only. Personal accounts never used."
+    },
+    "created_at": "2026-07-14",
+    "poc_launched_at": "2026-07-14",
+    "notes": "Consumer/creator audience -> target 100, deadline 45d. Differentiation = auto-updating + conversion focus."
+  },
+  {
+    "id": "meetingminutes",
+    "slug": "meetingminutes",
+    "rank": 10,
+    "name": "MeetingMinutes AI",
+    "tagline": "Every meeting ends with action items assigned — automatically.",
+    "category": "SMB Productivity",
+    "status": "RESEARCH",
+    "pain_summary": "Solo founders and SMBs lose 20 min/post-meeting to notes + follow-ups. Enterprise tools (Gong) are too heavy/expensive. They want transcript -> summary + owned action items + draft follow-up, cheap.",
+    "target_audience": "Solo founders, SMBs, consultants",
+    "willingness_to_pay": "$10-20/mo",
+    "evidence_quotes": [
+      "Every recorded sales call, customer call, and internal meeting transcribed, summarized, and routed automatically. The 20 minutes of post-meeting admin disappears.",
+      "No more lost notes. No more forgotten follow-ups. Just smarter, more efficient customer service."
+    ],
+    "sources": [
+      {
+        "title": "Automation Labz meeting notes + action items",
+        "url": "https://www.automationlabz.com/automations/meeting-notes-action-items"
+      },
+      {
+        "title": "Acta AI meeting notes",
+        "url": "https://blog.acta.ai/boosting-customer-service-efficiency-with-actionable-ai-meeting-notes/"
+      }
+    ],
+    "poc_scope": "Paste transcript (or mock recorder) -> LLM extracts summary + decisions + action items with owner + due date -> draft follow-up email. POC: transcript in -> structured out.",
+    "build_time_weeks": 2,
+    "waitlist_target": 50,
+    "decision_deadline_days": 30,
+    "marketing_required_posts": 3,
+    "signups": 0,
+    "signups_by_channel": {
+      "twitter": 0,
+      "reddit": 0,
+      "linkedin": 0,
+      "other": 0
+    },
+    "social_posts": [
+      {
+        "platform": "Twitter / X",
+        "copy": "You lose 20 min after every meeting writing recaps. MeetingMinutes turns the transcript into action items + a follow-up draft. $10/mo. Waitlist: [LINK]"
+      },
+      {
+        "platform": "Reddit r/ProductivityApps",
+        "copy": "What do you use for meeting notes that isn't enterprise-priced? Building a lean one. Early access: [LINK]"
+      },
+      {
+        "platform": "LinkedIn",
+        "copy": "Founders: stop being your own note-taker. MeetingMinutes assigns the action items so you don't have to. Join: [LINK]"
+      }
+    ],
+    "distribution": {
+      "owner": "Leverwright Labs (@leverwrightlabs)",
+      "channels": [
+        "Reddit",
+        "Indie Hackers",
+        "LinkedIn",
+        "Product Hunt"
+      ],
+      "cadence": "3 posts/week · 30 days",
+      "posted": {
+        "Reddit": false,
+        "Indie Hackers": false,
+        "LinkedIn": false,
+        "Product Hunt": false
+      },
+      "policy": "Studio identity only. Personal accounts never used."
+    },
+    "created_at": "2026-07-14",
+    "poc_launched_at": null,
+    "notes": "Crowded (Fireflies, etc.) but SMB/lean angle + price gap exist. Target 50, deadline 30d."
+  }
+]

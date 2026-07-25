@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SubTrack — Waitlist</title>
+<style>
+  :root{ --bg:#070a14; --accent:#6c5ce7; --accent2:#00d2ff; --txt:#e8edff; --muted:#94a0c4; --grad:linear-gradient(135deg,#6c5ce7,#00d2ff); --panel:rgba(20,27,48,.7); --stroke:rgba(120,140,200,.18); --good:#2bd9a0; --faint:#5e6a8f; }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--txt);background:radial-gradient(1100px 700px at 50% -10%,rgba(108,92,231,.22),transparent 60%),var(--bg);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;-webkit-font-smoothing:antialiased}
+  .card{width:100%;max-width:520px;background:var(--panel);border:1px solid var(--stroke);border-radius:22px;padding:38px 34px;box-shadow:0 24px 60px rgba(0,0,0,.5);backdrop-filter:blur(12px);text-align:center;animation:rise .5s ease both}
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .badge{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent2);border:1px solid var(--stroke);padding:5px 12px;border-radius:999px;margin-bottom:18px}
+  h1{font-size:27px;margin:0 0 10px;line-height:1.2;font-weight:780}
+  .tag{color:var(--muted);font-size:15px;line-height:1.55;margin:0 0 22px}
+  .pain{background:rgba(108,92,231,.08);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;padding:12px 16px;text-align:left;font-size:13.5px;color:var(--muted);line-height:1.6;margin:0 0 22px}
+  form{display:flex;flex-direction:column;gap:11px;text-align:left}
+  .field{display:flex;flex-direction:column;gap:6px}
+  label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+  input,select{background:rgba(10,15,30,.7);border:1px solid var(--stroke);color:var(--txt);padding:13px 14px;border-radius:12px;font-size:15px;font-family:inherit;outline:none;transition:.15s}
+  input:focus,select:focus{border-color:var(--accent2);box-shadow:0 0 0 3px rgba(0,210,255,.14)}
+  button{margin-top:6px;background:var(--grad);color:#fff;border:none;padding:14px;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;transition:.18s;box-shadow:0 10px 26px rgba(108,92,231,.4)}
+  button:hover{filter:brightness(1.07);transform:translateY(-1px)}
+  button:disabled{opacity:.6;cursor:default;transform:none;filter:none}
+  .count{font-size:12.5px;color:var(--faint);margin-top:14px}
+  .count b{color:var(--good)}
+  .ok{display:none;text-align:center;padding:10px 0}
+  .ok.show{display:block;animation:rise .4s ease both}
+  .ok .big{font-size:34px;margin-bottom:8px}
+  .ok h2{margin:0 0 6px;font-size:22px}
+  .ok p{color:var(--muted);font-size:14px;margin:0}
+  .err{display:none;color:#ff5c7c;font-size:13px;margin-top:8px;text-align:center}
+  .err.show{display:block}
+  .foot{margin-top:22px;font-size:12px;color:var(--faint)}
+</style>
+</head>
+<body>
+<div class="card">
+  <span class="badge">SMB Finance · Early Access</span>
+  <h1>SubTrack</h1>
+  <p class="tag">The SaaS spend tracker that doesn't require a SaaS management team.</p>
+  <div class="pain">The problem: SMBs track 40–80 subscriptions in spreadsheets that are always 3 months stale. Vendor raises price? Nobody notices. Zombie subscription from an ex-employee? Still billing. CFO asks "what's our real SaaS burn?" — you spend an afternoon. Mid-market tools cost $35K/yr, and the small end has nothing.</div>
+  <form id="form">
+    <div class="field"><label>Name</label><input id="name_i" name="name" placeholder="Your name" autocomplete="name" /></div>
+    <div class="field"><label>Email</label><input id="email_i" name="email" type="email" required placeholder="you@company.com" autocomplete="email" /></div>
+    <div class="field"><label>How did you hear about us?</label>
+      <select id="ch_i" name="channel">
+        <option value="twitter">Twitter / X</option><option value="reddit">Reddit</option><option value="linkedin">LinkedIn</option><option value="producthunt">Product Hunt</option><option value="other">Other</option>
+      </select>
+    </div>
+    <input type="hidden" name="_subject" value="Waitlist: SubTrack" />
+    <input type="hidden" name="project" value="subtrack" />
+    <button id="submit" type="submit">Join the waitlist</button>
+  </form>
+  <div class="err" id="errmsg">Something went wrong. Please try again — your email is safe.</div>
+  <div class="ok" id="ok"><div class="big">🎉</div><h2>You're on the list!</h2><p id="okmsg">We'll email you when SubTrack is ready.</p></div>
+  <div class="count">🎯 Goal: <b>50</b> founding members before we start building.</div>
+  <div class="foot">No spam. We'll only email you when SubTrack is ready.</div>
+</div>
+
+<script>
+  // ═══════════════════════════════════════════════════════════════
+  // BEFORE DEPLOYING: replace 'YOUR_ID' with your Formspree form ID.
+  //   1. Go to https://formspree.io → create free account → New Form
+  //   2. Copy the form ID (e.g. 'xwkdzbng')
+  //   3. Paste it below.
+  // ═══════════════════════════════════════════════════════════════
+  var FORMSPREE_ID = 'meeypnzg';
+
+  document.getElementById('form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('submit');
+    btn.disabled = true; btn.textContent = 'Joining…';
+    document.getElementById('errmsg').classList.remove('show');
+
+    var name = document.getElementById('name_i').value.trim();
+    var email = document.getElementById('email_i').value.trim();
+    var channel = document.getElementById('ch_i').value;
+    var ok = false;
+
+    // Submit to Formspree (real email capture)
+    if (FORMSPREE_ID && FORMSPREE_ID.indexOf('YOUR_') < 0) {
+      try {
+        var fd = new FormData();
+        fd.append('name', name); fd.append('email', email);
+        fd.append('channel', channel); fd.append('project', 'subtrack');
+        fd.append('_subject', 'Waitlist: SubTrack');
+        var fsResp = await fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+          method: 'POST', body: fd, headers: { 'Accept': 'application/json' }
+        });
+        if (fsResp.ok) ok = true;
+      } catch(e) {}
+    }
+
+    if (ok) {
+      document.getElementById('form').style.display = 'none';
+      document.getElementById('ok').classList.add('show');
+      document.getElementById('okmsg').textContent = "You're on the list. We'll email you when SubTrack is ready.";
+    } else {
+      btn.disabled = false; btn.textContent = 'Join the waitlist';
+      document.getElementById('errmsg').classList.add('show');
+    }
+  });
+</script>
+</body>
+</html>
