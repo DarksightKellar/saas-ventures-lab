@@ -160,6 +160,10 @@ async function handler(req, res) {
       const report = evaluate(projects);
       return sendJSON(res, 200, { report, evaluatedAt: new Date().toISOString() });
     }
+    // GET /api/debug
+    if (pathname === '/api/debug' && req.method === 'GET') {
+      return sendJSON(res, 200, { DASHBOARD_KEY_SET: !!process.env.DASHBOARD_KEY, DASHBOARD_KEY_LEN: (process.env.DASHBOARD_KEY || '').length, PORT: process.env.PORT });
+    }
     // GET /api/studio
     if (pathname === '/api/studio' && req.method === 'GET') {
       return sendJSON(res, 200, loadStudio());
