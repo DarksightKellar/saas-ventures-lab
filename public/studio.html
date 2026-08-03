@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leverwright Labs</title>
+<style>
+  :root{--bg:#070a14;--accent:#6c5ce7;--accent2:#00d2ff;--txt:#e8edff;--muted:#94a0c4;--grad:linear-gradient(135deg,#6c5ce7,#00d2ff);--panel:rgba(20,27,48,.7);--stroke:rgba(120,140,200,.18);--good:#2bd9a0}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--txt);background:radial-gradient(1100px 700px at 50% -10%,rgba(108,92,231,.22),transparent 60%),var(--bg);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;-webkit-font-smoothing:antialiased}
+  .card{width:100%;max-width:640px;background:var(--panel);border:1px solid var(--stroke);border-radius:22px;padding:44px 40px;box-shadow:0 24px 60px rgba(0,0,0,.5);backdrop-filter:blur(12px);text-align:center}
+  .logo{width:56px;height:56px;margin:0 auto 20px;border-radius:14px;background:var(--grad);box-shadow:0 8px 24px rgba(108,92,231,.45)}
+  h1{font-size:28px;margin:0 0 8px;font-weight:780}
+  .subtitle{color:var(--muted);font-size:15px;line-height:1.6;margin:0 0 28px}
+  .experiments{display:flex;flex-direction:column;gap:10px;text-align:left;margin:0 auto;max-width:480px}
+  .exp{background:rgba(108,92,231,.08);border:1px solid var(--stroke);border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;transition:.15s;text-decoration:none;color:var(--txt)}
+  .exp:hover{border-color:rgba(0,210,255,.35);background:rgba(108,92,231,.14)}
+  .exp .name{font-weight:650;font-size:15px}
+  .exp .tagline{font-size:12px;color:var(--muted);margin-top:3px}
+  .exp .arrow{color:var(--accent2);font-size:18px;flex:0 0 auto}
+  .exp .badge{font-size:10px;text-transform:uppercase;padding:3px 8px;border-radius:6px;background:rgba(43,217,160,.16);color:var(--good);margin-left:10px;white-space:nowrap}
+  .foot{margin-top:28px;font-size:12px;color:var(--faint)}
+  .foot a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo"></div>
+  <h1>Leverwright Labs</h1>
+  <p class="subtitle">We build the tools people are already asking for. 10 SaaS experiments, validated by real complaints, shipped fast — or killed faster. Run by Kelvin Kellar.</p>
+  <div class="experiments" id="experiments">
+    <div style="color:var(--muted);font-size:13px;text-align:center;padding:8px">Loading experiments…</div>
+  </div>
+  <div class="foot">
+    Leverwright Labs · <a href="https://x.com/leverwrightlabs">@leverwrightlabs</a>
+  </div>
+</div>
+<script>
+fetch('/api/projects').then(r=>r.json()).then(projects=>{
+  var html='';
+  projects.filter(p=>p.status!=='KILLED').sort((a,b)=>a.rank-b.rank).forEach(p=>{
+    html+='<a class="exp" href="/waitlist/'+p.slug+'"><div><div class="name">'+p.name+'</div><div class="tagline">'+p.tagline+'</div></div><div class="arrow">→</div></a>';
+  });
+  document.getElementById('experiments').innerHTML=html;
+});
+</script>
+</body>
+</html>

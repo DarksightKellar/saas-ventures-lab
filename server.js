@@ -322,8 +322,18 @@ async function handler(req, res) {
     }
 
 
+  // ---- Public studio landing page ----
+  if (pathname === '/') {
+    return await serveFile(res, path.join(PUBLIC_DIR, 'studio.html'), 'text/html');
+  }
+
   // ---- Dashboard ----
-  if (pathname === '/' || pathname === '/index.html') {
+  if (pathname === '/dashboard' || pathname === '/index.html') {
+    const DASHBOARD_KEY = process.env.DASHBOARD_KEY || '';
+    if (DASHBOARD_KEY && u.searchParams.get('key') !== DASHBOARD_KEY) {
+      res.writeHead(302, { Location: '/' });
+      return res.end();
+    }
     return await serveFile(res, path.join(PUBLIC_DIR, 'index.html'), 'text/html');
   }
 
