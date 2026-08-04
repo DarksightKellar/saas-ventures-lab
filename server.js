@@ -333,7 +333,7 @@ async function handler(req, res) {
 
   // ---- Dashboard ----
   if (pathname === '/dashboard' || pathname === '/index.html') {
-    const DASHBOARD_KEY = process.env.DASHBOARD_KEY || '';
+    const DASHBOARD_KEY = process.env.DASHBOARD_KEY || 'lev-sv1-2026';
     if (DASHBOARD_KEY && u.searchParams.get('key') !== DASHBOARD_KEY) {
       res.writeHead(302, { Location: '/' });
       return res.end();
